@@ -1,4 +1,5 @@
 import React from "react";
+import ClothingList from "../clothingList";
 
 const Accueil = () => {
   return (
@@ -9,6 +10,7 @@ const Accueil = () => {
       <div className="titre-cat-mobile d-lg-none d-md-none mt-4">
         <h1>ALL</h1>
       </div>
+      <ClothingList />
     </>
   );
 };
