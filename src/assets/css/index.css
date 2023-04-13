@@ -1,0 +1,239 @@
+#header {
+    background-color: #42B197;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#header h1 {
+    font-size: 2em;
+    color: #ffffff;
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+    position: relative;
+}
+
+#panier {
+    position: absolute;
+    top: 10px
+}
+
+#panier img {
+    width: 70px;
+    mix-blend-mode: color-dodge;
+}
+
+#nbreArt {
+    background: #04F1AA;
+    border-radius: 50%;
+    position: absolute;
+    left: 20px;
+    top: -8px;
+    padding: 5px;
+    width: 30px;
+    font-size: 14px;
+    color: black;
+}
+
+/*fin header */
+
+/*nav bar */
+
+.navbar {
+    border-bottom: 1px solid #aeabab;
+}
+
+.navigation {
+    padding: 25px;
+}
+
+.panier-nav {
+    position: relative;
+}
+
+#nbreArt-nav {
+    background: #04F1AA;
+    border-radius: 50%;
+    position: absolute;
+    left: 15px;
+    top: -5px;
+    padding: 1px;
+    width: 20px;
+    font-size: 10px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.menu:hover {
+    background-color: black;
+}
+
+.menu a:hover {
+    color: white
+}
+
+.menu a {
+    color: black;
+}
+
+.active-menu {
+    background: black;
+    border: 2px solid #7D9F93;
+    margin-right: 15px;
+    border-radius: 3px;
+    font-family: 'Inter', sans-serif;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.active-menu a {
+    color: white !important;
+}
+
+.deconnecter {
+    background-color: #FDD4D4;
+    color: black;
+    /* Couleur du texte */
+    border: none;
+    padding: 7px 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.deconnecter:hover {
+    background-color: #555555;
+    /* Couleur sombre au survol */
+    color: white;
+    /* Couleur du texte au survol */
+    cursor: pointer;
+}
+
+#profil {
+    border-radius: 50%;
+    width: 60px;
+    height: 55px;
+}
+
+.li-profil {
+    position: relative;
+}
+
+.li-profil span {
+    position: absolute;
+    left: 70px;
+    top: 40px;
+    font-weight: bold;
+}
+
+/*fin navBar */
+
+/* Accueil */
+
+.titre-cat {
+    background-color: #F6F0F0;
+    border-bottom: 1px solid #EF8A8A;
+    font-family: 'Inter', sans-serif;
+    padding: 12px;
+}
+
+/*fin Accueil */
+
+
+/* mobile */
+@media screen and (max-width: 768px) {
+    #header h1 {
+        font-size: 1.5em;
+        color: #ffffff;
+        font-weight: bold;
+        font-family: 'Inter', sans-serif;
+        position: relative;
+    }
+
+    #panier {
+        position: absolute;
+        top: 5px;
+    }
+
+    .navigation {
+        padding: 0;
+    }
+
+    .titre-cat-mobile {
+        background-color: #F6F0F0;
+        border-bottom: 1px solid #EF8A8A;
+        font-family: 'Inter', sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px;
+        margin: 0 15px;
+    }
+    .menu {
+        border: 1px solid #7D9F93;
+        /* margin-right: 150px; */
+        border-radius: 3px;
+        font-family: 'Inter', sans-serif;
+        height: 35px;
+        margin-top: 12px;
+        padding-left: 4px;
+    }
+    .navigation{
+        padding: 12px;
+    }
+    #ul-menu{
+        margin-top: 12px;
+    }
+
+    #ul-menu-profil{
+        margin-top: 20px;
+    }
+
+
+}
+
+@media screen and (min-width: 768px) {
+    .navigation {
+        padding: 12px;
+        position: relative;
+    }
+
+    .deconnecter {
+        margin-left: 80px;
+    }
+
+    .menu {
+        border: 2px solid #7D9F93;
+        margin-right: 15px;
+        border-radius: 3px;
+        font-family: 'Inter', sans-serif;
+        height: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+@media screen and (min-width: 768px) and (max-width: 991px){
+
+      .menu {
+        border: 2px solid #7D9F93;
+        margin-right: 15px;
+        border-radius: 3px;
+        font-family: 'Inter', sans-serif;
+        height: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px;
+    }
+}
+
+/* @media screen and (min-width: 768px) and (max-width: 991px)*/
