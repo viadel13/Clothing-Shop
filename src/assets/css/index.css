@@ -101,7 +101,6 @@
 .deconnecter {
     background-color: #FDD4D4;
     color: black;
-    /* Couleur du texte */
     border: none;
     padding: 7px 10px;
     border-radius: 5px;
@@ -110,9 +109,7 @@
 
 .deconnecter:hover {
     background-color: #555555;
-    /* Couleur sombre au survol */
     color: white;
-    /* Couleur du texte au survol */
     cursor: pointer;
 }
 
@@ -176,6 +173,7 @@
         padding: 12px;
         margin: 0 15px;
     }
+
     .menu {
         border: 1px solid #7D9F93;
         /* margin-right: 150px; */
@@ -184,16 +182,34 @@
         height: 35px;
         margin-top: 12px;
         padding-left: 4px;
-    }
-    .navigation{
-        padding: 12px;
-    }
-    #ul-menu{
-        margin-top: 12px;
+        width: 100%;
+        
     }
 
-    #ul-menu-profil{
+    .navigation {
+        padding: 12px;
+    }
+
+    #ul-menu {
+        margin-top: 12px;
+        display: flex;
+    }
+
+    #ul-menu-profil {
         margin-top: 20px;
+    }
+
+    .active-menu {
+        background: black;
+        border: 2px solid #7D9F93;
+        width: 100%;
+        border-radius: 3px;
+        font-family: 'Inter', sans-serif;
+        height: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        margin-top: 12px;
     }
 
 
@@ -221,9 +237,10 @@
     }
 
 }
-@media screen and (min-width: 768px) and (max-width: 991px){
 
-      .menu {
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+    .menu {
         border: 2px solid #7D9F93;
         margin-right: 15px;
         border-radius: 3px;
