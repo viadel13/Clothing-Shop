@@ -1,18 +1,30 @@
 import { useSelector, useDispatch } from "react-redux";
-import { useEffect } from "react";
+import { useEffect, useCallback } from "react";
 import { apiCall } from "../../redux/clothingList/ClothingListAction";
-import { ajouterArticle } from "../../redux/clothingList/ClothingListAction";
+import { useNavigate } from "react-router-dom";
+import { detailClothing } from "../../redux/detailsClothing/detailsClothingAction";
+import { showDatasDetails } from "../../redux/detailsClothing/detailsClothingAction";
 
 const ClothingList = () => {
   const dispacth = useDispatch();
   const data = useSelector((state) => state.clothingList);
-  const load = useSelector((state) => state.clothingList.load);
-
+  // const load = useSelector((state) => state.clothingList.load);
+  const navigate =useNavigate()
   console.log(data);
 
-  useEffect(() => {
+  const callback = useCallback(() => {
     dispacth(apiCall());
-  }, [apiCall]);
+  }, [dispacth]);
+  
+  useEffect(() => {
+    callback();
+  }, [callback]);
+
+  const acheterArticle = (id) =>{
+    navigate("/DetailsClothing")
+    dispacth(showDatasDetails(id, data.dataClothingList))  
+  }
+  
 
   const showClothing = data.load ? (
     <p>Load</p>
@@ -33,10 +45,10 @@ const ClothingList = () => {
               </h3>
               <h4>${i.price}</h4>
               <button
-                id="ajouter-art"
-                onClick={() => dispacth(ajouterArticle(i.id))}
+                className="ajouter-art"
+                onClick={() => acheterArticle(i.id)}
               >
-                Ajouter
+                Acheter
               </button>
             </div>
           </div>

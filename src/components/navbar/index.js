@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import panier from "../../assets/images/panier.png";
 import profil from "../../assets/images/profil.jpeg";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [activeLink, setActiveLink] = useState("");
@@ -49,26 +50,26 @@ const Navbar = () => {
         >
           <ul className="navbar-nav me-auto mb-2 flex-md-row mb-lg-0" id="ul-menu">
             <li className={activeLink === "all" ? "active-menu" : "nav-item menu"}>
-              <a className="nav-link" href="#" onClick={() => handleLinkClick("all")}>
+              <Link className="nav-link" to="/" onClick={() => handleLinkClick("all")}>
                 All
-              </a>
+              </Link>
             </li>
             <li className={activeLink === "men" ? "active-menu" : "nav-item menu"}>
-              <a className="nav-link" href="#" onClick={() => handleLinkClick("men")}>
+              <Link className="nav-link" to="/" onClick={() => handleLinkClick("men")}>
                 Men’s clothing
-              </a>
+              </Link>
             </li>
             <li className={activeLink === "women" ? "active-menu" : "nav-item menu"}>
-              <a className="nav-link" href="#" onClick={() => handleLinkClick("women")}>
+              <Link className="nav-link" to="/" onClick={() => handleLinkClick("women")}>
                 Women’s clothing
-              </a>
+              </Link>
             </li>
           </ul>
           <ul className="navbar-nav mb-2 flex-md-row mb-lg-0" id='ul-menu-profil'>
             <li className= "nav-item li-profil">
-              <a className="nav-link" href="#">
+              <Link className="nav-link" to="/">
                 <img src={profil} id="profil" alt="profil"/>
-              </a>
+              </Link>
               <span>Delvia</span>
             </li>
           </ul>
