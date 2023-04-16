@@ -23,6 +23,7 @@ const ClothingList = () => {
   const acheterArticle = (id) =>{
     navigate("/DetailsClothing")
     dispacth(showDatasDetails(id, data.dataClothingList))  
+    window.scrollTo(0, 0);
   }
   
 
