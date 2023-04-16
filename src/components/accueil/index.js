@@ -1,10 +1,10 @@
-import React from "react";
 import ClothingList from "../clothingList";
 import Header from "../header";
 import Navbar from "../navbar";
 import Footer from "../footer";
 
 const Accueil = () => {
+
   return (
     <>
       <Header />

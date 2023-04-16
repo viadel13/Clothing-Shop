@@ -1,7 +1,9 @@
-import { DETAIL_CLOTHING } from "./type"
+import { DETAIL_CLOTHING, SHOW_COMPONENT_DETAIL } from "./type"
 
 const initialStateDetailClothing = {
-    detailClothing: []
+    detailClothing: [],
+    openDetails: false
+
 }
 
 const detailClothingReducer = (state = initialStateDetailClothing, action)=>{
@@ -10,7 +12,12 @@ const detailClothingReducer = (state = initialStateDetailClothing, action)=>{
             return {
                 ...state,
                 detailClothing:action.payload,
-               
+            }
+        case SHOW_COMPONENT_DETAIL:
+          
+            return{
+                ...state,
+                openDetails: action.payload
             }
          
             

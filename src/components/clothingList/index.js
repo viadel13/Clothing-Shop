@@ -2,16 +2,17 @@ import { useSelector, useDispatch } from "react-redux";
 import { useEffect, useCallback } from "react";
 import { apiCall } from "../../redux/clothingList/ClothingListAction";
 import { useNavigate } from "react-router-dom";
-import { detailClothing } from "../../redux/detailsClothing/detailsClothingAction";
-import { showDatasDetails } from "../../redux/detailsClothing/detailsClothingAction";
+import {  showComponentDetail, showDatasDetails } from "../../redux/detailsClothing/detailsClothingAction";
 
 const ClothingList = () => {
   const dispacth = useDispatch();
   const data = useSelector((state) => state.clothingList);
+  
   // const load = useSelector((state) => state.clothingList.load);
   const navigate =useNavigate()
-  console.log(data);
-
+  // console.log(data);
+ 
+  
   const callback = useCallback(() => {
     dispacth(apiCall());
   }, [dispacth]);
@@ -19,6 +20,11 @@ const ClothingList = () => {
   useEffect(() => {
     callback();
   }, [callback]);
+
+  useEffect(()=>{
+    dispacth(showComponentDetail(false))
+  },[dispacth])
+
 
   const acheterArticle = (id) =>{
     navigate("/DetailsClothing")

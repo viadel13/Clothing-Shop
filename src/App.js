@@ -3,7 +3,6 @@ import store from "./redux/store";
 import Rout from "./routes/Index";
 
 function App() {
-
   return (
     <>
       <Provider store={store}>

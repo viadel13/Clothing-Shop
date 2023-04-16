@@ -1,12 +1,7 @@
-import { AJOUTER_ARTICLE, LOAD_ARTICLE, LOAD } from "./type";
+import { LOAD_ARTICLE, LOAD } from "./type";
 import axios from 'axios'
 
-export const ajouterArticle = idArticle =>{
-    return{
-        type: AJOUTER_ARTICLE,
-        payload : idArticle
-    }
-}
+
 export const loadArticle = dataApi =>{
     return{
         type: LOAD_ARTICLE,

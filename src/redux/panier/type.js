@@ -1,0 +1,1 @@
+export const AJOUTER_ARTICLE = 'AJOUTER_ARTICLE'

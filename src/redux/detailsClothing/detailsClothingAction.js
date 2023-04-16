@@ -1,9 +1,16 @@
-import { DETAIL_CLOTHING } from "./type";
+import { DETAIL_CLOTHING, SHOW_COMPONENT_DETAIL } from "./type";
 
 export const detailClothing = data =>{
     return{
         type: DETAIL_CLOTHING,
         payload : data
+    }
+}
+
+export const showComponentDetail = (param) =>{
+    return{
+        type: SHOW_COMPONENT_DETAIL,
+        payload : param 
     }
 }
 
