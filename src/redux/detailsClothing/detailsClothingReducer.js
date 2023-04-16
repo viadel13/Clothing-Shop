@@ -1,7 +1,7 @@
 import { DETAIL_CLOTHING } from "./type"
 
 const initialStateDetailClothing = {
-    detailClothing: [],
+    detailClothing: []
 }
 
 const detailClothingReducer = (state = initialStateDetailClothing, action)=>{
@@ -9,7 +9,8 @@ const detailClothingReducer = (state = initialStateDetailClothing, action)=>{
         case DETAIL_CLOTHING:
             return {
                 ...state,
-                detailClothing:action.payload 
+                detailClothing:action.payload,
+               
             }
          
             

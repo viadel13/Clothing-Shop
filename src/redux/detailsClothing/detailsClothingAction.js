@@ -12,6 +12,8 @@ export const showDatasDetails = (id, dataClothingList) =>{
     return (dispatch) =>{
         const dataFind = dataClothingList.find(i=>i.id === id)
         dispatch(detailClothing(dataFind))
+        localStorage.setItem('detailClothingData', JSON.stringify(dataFind));
+
     }
 
 }
