@@ -25,6 +25,7 @@ export const apiCall = () =>{
         .then(response=>{
             const filter = response.data.filter((i)=>i.category === 'men\'s clothing' || i.category === 'women\'s clothing')
             dispacth(loadArticle(filter))
+            localStorage.setItem('ClothingData', JSON.stringify(filter));
         })
         .catch(error=>{
     

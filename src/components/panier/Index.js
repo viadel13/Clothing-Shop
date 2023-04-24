@@ -6,21 +6,27 @@ import Header from "../header";
 import Navbar from "../navbar";
 import { showComponentDetail } from "../../redux/detailsClothing/detailsClothingAction";
 import Footer from "../footer";
+import { deleteArticle } from "../../redux/panier/panierAction";
 const Panier = () => {
   const data = useSelector((state) => state.panier);
   const dispacth = useDispatch();
   console.log(data);
+
   useEffect(() => {
-    dispacth(showComponentDetail(true));
+    dispacth(showComponentDetail(true));  
   }, [dispacth]);
+
+  const del =(id) =>{
+    dispacth(deleteArticle(id))
+  }
 
   const articles = data.panier.map((i) => {
     return (
       <>
         <div className="row blocArt">
           <div className="col-6 col-md-6 col-lg-6 p-3">
-            <div className="imageArticle">
-              <span>
+            <div className="imageArticle animate__animated animate__fadeIn">
+              <span onClick={()=>del(i.id)}>
                 <AiOutlineCloseCircle className="delete" />
               </span>
               <img src={i.image} alt={i.title} />

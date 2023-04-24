@@ -3,6 +3,7 @@ import clothingListReducer from './clothingList/ClothingListReducer';
 import detailClothingReducer from './detailsClothing/detailsClothingReducer';
 import panierReducer from './panier/panierReducer';
 import thunk from 'redux-thunk'
+import { composeWithDevTools } from 'redux-devtools-extension';
 
 const rootReducer = combineReducers({
     clothingList: clothingListReducer,
@@ -11,6 +12,6 @@ const rootReducer = combineReducers({
 
 })
 
-const store = createStore(rootReducer, applyMiddleware(thunk))
+const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)))
 
 export default store

@@ -1,7 +1,7 @@
 import ClothingList from "../clothingList";
 import Header from "../header";
 import Navbar from "../navbar";
-import Footer from "../footer";
+
 
 const Accueil = () => {
 
@@ -16,7 +16,7 @@ const Accueil = () => {
         <h1>ALL</h1>
       </div>
       <ClothingList />
-      <Footer />
+
     </>
   );
 };
